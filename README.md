@@ -15,7 +15,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 ```
 
-# input_date
+# input_data
 ```python
 def _read32(bytestream):
     # 采用大尾端存储
