@@ -14,3 +14,18 @@ Add follwing codes:
 import os  
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 ```
+
+# input_date
+```python
+def _read32(bytestream):
+    # 采用大尾端存储
+    dt = numpy.dtype(numpy.uint32).newbyteorder('>')
+    return numpy.frombuffer(bytestream.read(4), dtype=dt)
+```
+change to  
+```python
+def _read32(bytestream):
+    # 采用大尾端存储
+    dt = numpy.dtype(numpy.uint32).newbyteorder('>')
+    return numpy.frombuffer(bytestream.read(4), dtype=dt)[0]
+```
