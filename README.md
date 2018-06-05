@@ -6,7 +6,8 @@ tensorflow 使用 [清华大学开源软件网站](https://mirrors.tuna.tsinghua
 Add test001 for testing your python  
 Add test002-003 for testing your tensorflow
 
-# How to ignore and shield warning:Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+# How to ignore and shield warning:
+Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA  
 add follwing codes:  
 ```python
 import os  
