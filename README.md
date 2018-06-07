@@ -8,7 +8,7 @@ tensorflow 使用 [清华大学开源软件网站](https://mirrors.tuna.tsinghua
 
 # Test
 Add test001 for testing your python  
-Add test002-004 for testing your tensorflow  
+Add test002-004 for testing your tensorflow. PS: test002 for testing your GPU function of tensorflow   
 Add test005-006 for testing your tensorboard
 
 # How to ignore and shield warning:
@@ -22,14 +22,12 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 # input_data
 ```python
 def _read32(bytestream):
-    # 采用大尾端存储
     dt = numpy.dtype(numpy.uint32).newbyteorder('>')
     return numpy.frombuffer(bytestream.read(4), dtype=dt)
 ```
 change to  
 ```python
 def _read32(bytestream):
-    # 采用大尾端存储
     dt = numpy.dtype(numpy.uint32).newbyteorder('>')
     return numpy.frombuffer(bytestream.read(4), dtype=dt)[0]
 ```
